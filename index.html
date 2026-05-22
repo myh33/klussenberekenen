@@ -64,7 +64,7 @@ nav{
 }
 .hero-foto{
   position:absolute;right:0;top:0;bottom:0;width:52%;
-  background:url('https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=1200&q=80') center/cover no-repeat;
+  background:url('https://source.unsplash.com/1200x800/?paving,cobblestone,driveway') center/cover no-repeat;
   opacity:.55;
 }
 .hero-foto::before{
@@ -503,13 +503,13 @@ footer a:hover{color:var(--oranje);}
   <section class="over" id="over">
     <div class="over-fotos">
       <div class="over-foto">
-        <img src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=900&q=80" alt="Bestrating werk">
+        <img src="https://source.unsplash.com/900x500/?paving,bricks,garden" alt="Bestrating werk">
       </div>
       <div class="over-foto">
-        <img src="https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?w=500&q=80" alt="Klinkers leggen">
+        <img src="https://source.unsplash.com/500x500/?cobblestone,laying" alt="Klinkers leggen">
       </div>
       <div class="over-foto">
-        <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=500&q=80" alt="Terras bestrating">
+        <img src="https://source.unsplash.com/500x500/?garden,terrace,patio" alt="Terras bestrating">
       </div>
     </div>
     <div class="over-tekst">
@@ -570,19 +570,19 @@ footer a:hover{color:var(--oranje);}
     <p class="sectie-sub">Een kleine greep uit onze uitgevoerde tuinen en opritten in de regio Noord-Holland.</p>
     <div class="fotos-masonry">
       <div class="pfoto pfoto-t">
-        <img src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=600&q=80" alt="Oprit klinkers" style="height:100%;">
+        <img src="https://source.unsplash.com/600x460/?driveway,paving,klinkers" alt="Oprit klinkers" style="height:100%;">
       </div>
       <div class="pfoto pfoto-h">
-        <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&q=80" alt="Terras aanleg" style="height:100%;">
+        <img src="https://source.unsplash.com/600x220/?garden,terrace,tiles" alt="Terras aanleg" style="height:100%;">
       </div>
       <div class="pfoto pfoto-h">
-        <img src="https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?w=600&q=80" alt="Moderne bestrating" style="height:100%;">
+        <img src="https://source.unsplash.com/600x220/?paving,stones,path" alt="Moderne bestrating" style="height:100%;">
       </div>
       <div class="pfoto pfoto-h" style="height:220px;">
-        <img src="https://images.unsplash.com/photo-1625604029887-45f9c2f7cbc9?w=900&q=80" alt="Klinkers patroon" style="height:100%;">
+        <img src="https://source.unsplash.com/900x220/?brick,pavement,pattern" alt="Klinkers patroon" style="height:100%;">
       </div>
       <div class="pfoto pfoto-h">
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Tuin aanleg" style="height:100%;">
+        <img src="https://source.unsplash.com/600x220/?cobblestone,garden,path" alt="Tuin aanleg" style="height:100%;">
       </div>
     </div>
   </section>
@@ -828,133 +828,139 @@ footer a:hover{color:var(--oranje);}
 
 <script>
 // ===== DATA =====
-const STENEN = [
-  {
-    id:'bk-ant', naam:'Betonklinker Antraciet', cat:'beton',
-    img:'https://images.unsplash.com/photo-1625604029887-45f9c2f7cbc9?w=400&q=75',
-    maat:'21×10,5×8 cm', prijs:22.50,
-    omschrijving:'Tijdloze donkere klinker, populair voor moderne tuinen en opritten.'
-  },
-  {
-    id:'bk-grijs', naam:'Betonklinker Grijs', cat:'beton',
-    img:'https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=400&q=75',
-    maat:'21×10,5×8 cm', prijs:18.00,
-    omschrijving:'Klassieke grijze klinker, geschikt voor opritten met zwaar verkeer.'
-  },
-  {
-    id:'bk-rood', naam:'Betonklinker Rood-Bruin', cat:'beton',
-    img:'https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?w=400&q=75',
-    maat:'21×10,5×8 cm', prijs:20.00,
-    omschrijving:'Warme roodbruine tint, geeft een landelijk karakter aan uw tuin.'
-  },
-  {
-    id:'bk-beige', naam:'Betonklinker Beige', cat:'beton',
-    img:'https://images.unsplash.com/photo-1558904541-efa843a96f01?w=400&q=75',
-    maat:'21×10,5×8 cm', prijs:19.50,
-    omschrijving:'Zachte beige kleur, past bij zowel moderne als traditionele tuinen.'
-  },
-  {
-    id:'gk-rood', naam:'Gebakken Klinker Rood', cat:'gebakken',
-    img:'https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=400&q=75',
-    maat:'21×10,5×5 cm', prijs:32.00,
-    omschrijving:'Authentieke gebakken klinker van klei. Gaat generaties mee en wordt alleen maar mooier.'
-  },
-  {
-    id:'gk-bruin', naam:'Gebakken Klinker Bruin', cat:'gebakken',
-    img:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=75',
-    maat:'21×10,5×5 cm', prijs:34.00,
-    omschrijving:'Rijke bruine tint, ideaal voor een sfeervolle klassieke uitstraling.'
-  },
-  {
-    id:'gk-wf', naam:'Waalformaat Bronsgrijs', cat:'gebakken',
-    img:'https://images.unsplash.com/photo-1601599561213-832382fd07ba?w=400&q=75',
-    maat:'20×6,5×5 cm', prijs:38.00,
-    omschrijving:'Slanke waalformaat klinker — perfect voor slingerpaden en organische vormen.'
-  },
-  {
-    id:'bt-3030', naam:'Betontegel Grijs 30×30', cat:'tegel',
-    img:'https://images.unsplash.com/photo-1615971677499-5467cbab01c0?w=400&q=75',
-    maat:'30×30×4,5 cm', prijs:14.00,
-    omschrijving:'Voordelige standaard betontegel, geschikt voor terras en pad.'
-  },
-  {
-    id:'bt-5050', naam:'Betontegel Grijs 50×50', cat:'tegel',
-    img:'https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=400&q=75',
-    maat:'50×50×5 cm', prijs:16.50,
-    omschrijving:'Grotere formaat geeft een ruimer en moderner oogeffect.'
-  },
-  {
-    id:'bt-ant', naam:'Betontegel Antraciet 40×40', cat:'tegel',
-    img:'https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=400&q=75',
-    maat:'40×40×4,5 cm', prijs:18.00,
-    omschrijving:'Strakke antraciet tegel — populaire keuze voor moderne tuinen.'
-  },
-  {
-    id:'ker-grijs', naam:'Keramiek 60×60 Grijs', cat:'keramiek',
-    img:'https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=400&q=75',
-    maat:'60×60×2 cm', prijs:52.00,
-    omschrijving:'Slijtvast keramiek, onderhoudsarm en vorstbestendig. Luxe uitstraling.'
-  },
-  {
-    id:'ker-beige', naam:'Keramiek 60×60 Beige', cat:'keramiek',
-    img:'https://images.unsplash.com/photo-1558904541-efa843a96f01?w=400&q=75',
-    maat:'60×60×2 cm', prijs:55.00,
-    omschrijving:'Warme beige keramiek, zeer populair voor exclusieve terrassen.'
-  },
-  {
-    id:'ker-flag', naam:'Flagstone Naturelgrijs', cat:'keramiek',
-    img:'https://images.unsplash.com/photo-1625604029887-45f9c2f7cbc9?w=400&q=75',
-    maat:'60×40×3 cm', prijs:62.00,
-    omschrijving:'Flagstone look met de voordelen van keramiek. Robuust en tijdloos.'
-  },
-];
-
 const PRIJZEN = { zand:45, grond:32, puin:48, klinkers:55, arbeid:28 };
-
+let STENEN = [];
 let gekozenSteen = null;
 let fotos = [];
 let huidigStap = 1;
+let huidigeCat = 'alle';
 
-// ===== INIT =====
-renderStenen('alle');
+// Spaansen categorie slugs
+const CAT_URLS = {
+  beton:     'https://www.spaansen.nl/bestrating/beton',
+  gebakken:  'https://www.spaansen.nl/bestrating/gebakken-klinkers',
+  keramiek:  'https://www.spaansen.nl/bestrating/keramiek',
+  natuur:    'https://www.spaansen.nl/bestrating/natuursteen-bestrating',
+};
 
-function renderStenen(cat) {
+// Haal producten op via Claude API (die kan de Spaansen site fetchen)
+async function laadSpaansenProducten(cat) {
+  const grid = document.getElementById('stenenGrid');
+  grid.innerHTML = `<div style="grid-column:1/-1;padding:32px;text-align:center;color:var(--grijs);">
+    <div style="font-size:28px;margin-bottom:12px;">⏳</div>
+    <div style="font-weight:500;">Producten laden van Spaansen...</div>
+    <div style="font-size:13px;margin-top:6px;opacity:.7;">Even geduld</div>
+  </div>`;
+
+  const url = cat === 'alle' ? 'https://www.spaansen.nl/bestrating' : (CAT_URLS[cat] || 'https://www.spaansen.nl/bestrating');
+
+  try {
+    const resp = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 2000,
+        messages: [{
+          role: 'user',
+          content: `Haal de producten op van deze Spaansen pagina: ${url}
+
+Geef een JSON array terug met maximaal 12 producten. Elk product heeft:
+- id: unieke string (slug van product URL)
+- naam: productnaam
+- cat: categorie (beton/gebakken/keramiek/natuur)
+- img: volledige afbeelding URL van spaansen.nl (begin met https://www.spaansen.nl/media/ of /content/products/)
+- maat: afmetingen als string
+- prijs: prijs per m2 als getal (alleen het getal, geen €)
+- url: volledige productpagina URL
+
+Geef ALLEEN de JSON array terug, geen uitleg. Als een prijs niet beschikbaar is, gebruik dan 0.`
+        }]
+      })
+    });
+
+    const data = await resp.json();
+    const tekst = data.content?.map(b => b.text || '').join('') || '';
+    // Verwijder markdown code fences als die er zijn
+    const json = tekst.replace(/```json|```/g, '').trim();
+    const producten = JSON.parse(json);
+
+    // Sla op en render
+    if (cat === 'alle') {
+      STENEN = producten;
+    } else {
+      // Vervang of voeg toe voor deze cat
+      STENEN = STENEN.filter(s => s.cat !== cat).concat(producten);
+    }
+    renderSteenKaarten(cat);
+
+  } catch(e) {
+    console.error(e);
+    grid.innerHTML = `<div style="grid-column:1/-1;padding:24px;text-align:center;">
+      <div style="font-size:24px;margin-bottom:8px;">⚠️</div>
+      <div style="font-weight:500;color:var(--bruin);">Producten tijdelijk niet beschikbaar</div>
+      <div style="font-size:13px;color:var(--grijs);margin-top:6px;">Controleer uw internetverbinding of probeer het opnieuw.</div>
+      <button onclick="laadSpaansenProducten('${cat}')" style="margin-top:14px;padding:10px 20px;background:var(--oranje);color:#fff;border:none;border-radius:8px;cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:600;">Opnieuw proberen</button>
+    </div>`;
+  }
+}
+
+function renderSteenKaarten(cat) {
   const grid = document.getElementById('stenenGrid');
   const lijst = cat === 'alle' ? STENEN : STENEN.filter(s => s.cat === cat);
+
+  if (!lijst.length) {
+    grid.innerHTML = `<div style="grid-column:1/-1;padding:24px;text-align:center;color:var(--grijs);">Geen producten gevonden.</div>`;
+    return;
+  }
+
   grid.innerHTML = lijst.map(s => `
     <div class="steen-kaart ${gekozenSteen?.id === s.id ? 'geselecteerd' : ''}" onclick="kiesSteen('${s.id}')">
       <img class="steen-img" src="${s.img}" alt="${s.naam}" loading="lazy"
-        onerror="this.style.background='#e0d8cc';this.style.height='130px';">
+        onerror="this.src='';this.style.background='linear-gradient(135deg,#e0d8cc,#c8b89a)';this.style.height='130px';">
       <div class="steen-info">
         <div class="steen-naam">${s.naam}</div>
-        <div class="steen-maat">${s.maat}</div>
-        <div class="steen-prijs">v.a. €${s.prijs.toFixed(2)}/m²</div>
+        <div class="steen-maat">${s.maat||''}</div>
+        <div class="steen-prijs">${s.prijs > 0 ? `€${Number(s.prijs).toFixed(2)}/m²` : 'Prijs op aanvraag'}</div>
+        ${s.url ? `<a href="${s.url}" target="_blank" onclick="event.stopPropagation()" style="font-size:11px;color:var(--steen);text-decoration:none;margin-top:3px;display:block;">Bekijk op spaansen.nl ↗</a>` : ''}
       </div>
     </div>
   `).join('');
 }
 
+// ===== INIT =====
+// Laad producten zodra stap 3 zichtbaar wordt (lazy)
+let steenLaden = false;
+function ensureSteenGeladen() {
+  if (!steenLaden) {
+    steenLaden = true;
+    laadSpaansenProducten('alle');
+  }
+}
+
 function filterStenen(cat, btn) {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('actief'));
   btn.classList.add('actief');
-  renderStenen(cat);
+  huidigeCat = cat;
+  const heeftData = cat === 'alle' ? STENEN.length > 0 : STENEN.some(s => s.cat === cat);
+  if (heeftData) {
+    renderSteenKaarten(cat);
+  } else {
+    laadSpaansenProducten(cat);
+  }
 }
 
 function kiesSteen(id) {
   gekozenSteen = STENEN.find(s => s.id === id);
   document.getElementById('f-later').checked = false;
   document.getElementById('geenKeuzeWaarschuwing').style.display = 'none';
-  // Re-render huidige filter
-  const actief = document.querySelector('.filter-btn.actief');
-  const cat = actief ? actief.textContent.trim() : 'alle';
-  const catMap = {'Alle':'alle','Betonklinkers':'beton','Gebakken klinkers':'gebakken','Betontegels':'tegel','Keramiek':'keramiek'};
-  renderStenen(catMap[cat] || 'alle');
+  renderSteenKaarten(huidigeCat);
 }
 
 function toggleLater(cb) {
   if (cb.checked) {
     gekozenSteen = null;
-    renderStenen('alle');
+    renderSteenKaarten(huidigeCat);
     document.getElementById('geenKeuzeWaarschuwing').style.display = 'none';
   }
 }
@@ -983,6 +989,9 @@ function naarStap(nr) {
   if (nr === 5) {
     renderBerekening();
     renderSamenvatting();
+  }
+  if (nr === 3) {
+    ensureSteenGeladen();
   }
   naarStapWeergave(nr);
 }
